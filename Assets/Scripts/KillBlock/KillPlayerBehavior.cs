@@ -13,7 +13,7 @@ public class KillPlayerBehavior : MonoBehaviour
             Destroy(collision.gameObject);
 
         if (collision.gameObject.CompareTag("Player"))
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
 
     }
 
