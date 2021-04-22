@@ -18,4 +18,4 @@ This game can work on pc and mobile device on a browser.
 
  
 ###Link:
-https://ethanjones19.github.io/Assessment/
+https://ethanjones19.github.io/Assessment/Player/
