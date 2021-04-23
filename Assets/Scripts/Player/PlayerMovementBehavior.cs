@@ -15,13 +15,14 @@ public class PlayerMovementBehavior : MonoBehaviour
     //Function that starts up the rigid body
     private void Start()
     {
+        //Gets the component of the rigidbody
         _rigidbody = GetComponent<Rigidbody>();
     }
 
     //Updates the mouse button and force
     void Update()
     {
-        //Checks if mouse button has been pressed down and grounded to add jump force
+        //Checks if mouse button has been pressed down and object is grounded to add jump force
         if (Input.GetMouseButtonDown(0) && _grounded)
             _rigidbody.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
 
@@ -30,7 +31,7 @@ public class PlayerMovementBehavior : MonoBehaviour
     //Function that checks if on collision been enter
     private void OnCollisionEnter(Collision collision)
     {
-        //Checks if game object is colliding with the ground
+        //Checks if the game object is colliding with the ground
         if (collision.gameObject)
             _grounded = true;
     }
